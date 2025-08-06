@@ -1,22 +1,16 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Capitalize Demo</title>
-</head>
+<head><title>Capitalize Demo</title></head>
 <body>
-  <h2>Capitalize Function Demo</h2>
-  
-  <input type="text" id="inputText" placeholder="Type text here" />
+  <input id="inputText" placeholder="Type your text here" />
   <button onclick="capitalizeInput()">Capitalize</button>
-  
   <p>Output: <span id="output"></span></p>
-  
+
   <script src="../utils/capitalize.js"></script>
   <script>
     function capitalizeInput() {
       const input = document.getElementById('inputText').value;
-      const output = capitalize(input);
-      document.getElementById('output').textContent = output;
+      document.getElementById('output').textContent = capitalize(input);
     }
   </script>
 </body>

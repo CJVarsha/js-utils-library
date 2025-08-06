@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Array Sum Demo</title>
+</head>
+<body>
+  <h2>Array Sum Demo</h2>
+  <input id="inputArray" placeholder="Enter numbers separated by commas" style="width: 300px;">
+  <button onclick="calcSum()">Calculate Sum</button>
+  <p>Result: <span id="sumResult"></span></p>
+
+  <script src="../utils/arraySum.js"></script>
+  <script>
+    function calcSum() {
+      const input = document.getElementById('inputArray').value;
+      const arr = input.split(',').map(n => parseFloat(n.trim())).filter(n => !isNaN(n));
+      document.getElementById('sumResult').textContent = arraySum(arr);
+    }
+  </script>
+</body>
+</html>

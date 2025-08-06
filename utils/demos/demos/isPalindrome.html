@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Palindrome Demo</title>
+</head>
+<body>
+  <h2>Palindrome Check Demo</h2>
+  <input id="palinInput" placeholder="Enter text">
+  <button onclick="checkPalindrome()">Check</button>
+  <p>Result: <span id="palinResult"></span></p>
+
+  <script src="../utils/isPalindrome.js"></script>
+  <script>
+    function checkPalindrome() {
+      const input = document.getElementById('palinInput').value;
+      document.getElementById('palinResult').textContent =
+        isPalindrome(input) ? "Palindrome!" : "Not a palindrome";
+    }
+  </script>
+</body>
+</html>

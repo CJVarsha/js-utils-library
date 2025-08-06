@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Email Validator Demo</title>
+</head>
+<body>
+  <h2>Email Validator Demo</h2>
+  <input id="emailInput" placeholder="Enter email">
+  <button onclick="validateEmail()">Validate</button>
+  <p>Result: <span id="emailResult"></span></p>
+
+  <script src="../utils/emailValidator.js"></script>
+  <script>
+    function validateEmail() {
+      const email = document.getElementById('emailInput').value;
+      document.getElementById('emailResult').textContent =
+        emailValidator(email) ? "Valid Email!" : "Invalid Email";
+    }
+  </script>
+</body>
+</html>
